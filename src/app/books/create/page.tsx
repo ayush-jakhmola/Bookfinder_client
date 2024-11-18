@@ -15,7 +15,7 @@ export default function CreateBook() {
     description: "",
   });
 
-  const [addAuthor, { data, loading, error }] = useMutation(AddBook);
+  const [addAuthor, { loading }] = useMutation(AddBook);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;

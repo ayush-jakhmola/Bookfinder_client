@@ -1,5 +1,5 @@
 "use client";
-import { AddBook, GetBookById, UpdateBook } from "@/api/graphql/book.api";
+import { GetBookById, UpdateBook } from "@/api/graphql/book.api";
 import Loader from "@/components/loader/loader";
 import { useMutation, useQuery } from "@apollo/client";
 import { redirect, useParams } from "next/navigation";
@@ -8,7 +8,7 @@ import React from "react";
 export default function CreateBook() {
   const { id } = useParams();
 
-  const { loading, error, data } = useQuery(GetBookById, {
+  const { loading, data } = useQuery(GetBookById, {
     variables: {
       id,
     },

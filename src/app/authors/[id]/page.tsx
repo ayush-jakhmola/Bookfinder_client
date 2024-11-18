@@ -6,9 +6,9 @@ import { useParams } from "next/navigation";
 import { redirect } from "next/navigation";
 import "./page.css";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page() {
   const { id } = useParams();
-  const { loading, error, data } = useQuery(GetAuthorById, {
+  const { loading, data } = useQuery(GetAuthorById, {
     variables: {
       id,
     },

@@ -6,9 +6,9 @@ import { redirect } from "next/navigation";
 import "./page.css";
 import { DeleteBook, GetBookById } from "@/api/graphql/book.api";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page() {
   const { id } = useParams();
-  const { loading, error, data } = useQuery(GetBookById, {
+  const { loading, data } = useQuery(GetBookById, {
     variables: {
       id,
     },

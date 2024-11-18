@@ -1,9 +1,5 @@
 "use client";
-import {
-  AddAuthor,
-  GetAuthorById,
-  UpdateAuthor,
-} from "@/api/graphql/author.api";
+import { GetAuthorById, UpdateAuthor } from "@/api/graphql/author.api";
 import Loader from "@/components/loader/loader";
 import { useMutation, useQuery } from "@apollo/client";
 import { useParams } from "next/navigation";
@@ -19,7 +15,7 @@ export default function UpdateAuthorDetails() {
     biography: "",
   });
 
-  const { loading, error, data } = useQuery(GetAuthorById, {
+  const { loading, data } = useQuery(GetAuthorById, {
     variables: {
       id,
     },

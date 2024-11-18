@@ -11,7 +11,7 @@ export default function CreateAuthor() {
     born_date: "",
     biography: "",
   });
-  const [addAuthor, { data, loading, error }] = useMutation(AddAuthor);
+  const [addAuthor, { loading }] = useMutation(AddAuthor);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;

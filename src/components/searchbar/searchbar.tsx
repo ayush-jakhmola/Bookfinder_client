@@ -27,7 +27,7 @@ export default function Searchbar({
       <button
         type="button"
         onClick={() => {
-          var params: any = {};
+          const params: any = {};
           if (key) {
             params[key] = search;
             onSearch(params);

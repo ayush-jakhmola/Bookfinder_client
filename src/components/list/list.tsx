@@ -11,7 +11,7 @@ export function ListItem({
 }: {
   body: {
     heading?: string;
-    subheading?: String;
+    subheading?: string;
     content?: string;
   };
   imgSrc: string;
