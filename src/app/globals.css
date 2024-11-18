@@ -3,19 +3,77 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #78b3ce;
+  --background: #fbf8ef;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 10px 5px;
+}
+
+/* form-controls */
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.form-control input {
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 5px;
+  width: 300px;
+}
+
+.form-control textarea {
+  outline: none;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.form-control button {
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  color: #eeeeee;
+  background-color: var(--primary);
+  margin: 20px auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  max-width: 620px;
+  margin: 50px auto;
+}
+
+.btn {
+  border-radius: 5px;
+  color: #eeeeee;
+  background-color: var(--primary);
+  padding: 10px 20px;
+  cursor: pointer;
 }

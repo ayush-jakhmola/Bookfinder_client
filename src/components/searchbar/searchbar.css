@@ -1,0 +1,32 @@
+.searchbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar select {
+  height: 40px;
+  background-color: var(--background);
+  outline: none;
+}
+
+.searchbar input {
+  border: 1px solid var(--primary);
+  height: 40px;
+  width: 600px;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.searchbar button {
+  border-radius: 10px;
+  background-color: var(--primary);
+  padding: 10px 20px;
+  text-transform: capitalize;
+  color: #eeeeee;
+}

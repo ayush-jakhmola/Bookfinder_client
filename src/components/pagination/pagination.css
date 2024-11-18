@@ -1,0 +1,24 @@
+/* pagination */
+
+.pag {
+  display: flex;
+  gap: 5px;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.pag a {
+  color: var(--primary);
+  padding: 10px;
+  border: 0.5px solid #000;
+  cursor: pointer;
+}
+
+.pag a.selected {
+  background-color: var(--primary);
+  color: white;
+}
+
+.pag a:hover {
+  transform: scale(1.1);
+}

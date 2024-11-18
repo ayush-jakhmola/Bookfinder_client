@@ -1,0 +1,22 @@
+nav {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav__branding {
+  text-transform: capitalize;
+  font-size: larger;
+  font-weight: bolder;
+}
