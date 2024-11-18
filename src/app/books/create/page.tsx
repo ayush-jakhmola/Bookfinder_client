@@ -3,9 +3,17 @@ import { AddBook } from "@/api/graphql/book.api";
 import Loader from "@/components/loader/loader";
 import { useMutation } from "@apollo/client";
 import { redirect, useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 
-export default function CreateBook() {
+export default function Page() {
+  return (
+    <Suspense>
+      <CreateBook />
+    </Suspense>
+  );
+}
+
+function CreateBook() {
   const searchParams = useSearchParams();
   const author_id = searchParams.get("authorId");
 
