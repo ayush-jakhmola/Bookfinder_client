@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const createApolloClient = () => {
   return new ApolloClient({
-    uri: "http://localhost:4040",
+    uri: "https://bookfinder-server.onrender.com/",
     cache: new InMemoryCache(),
   });
 };
