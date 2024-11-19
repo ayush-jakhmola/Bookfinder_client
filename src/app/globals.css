@@ -44,6 +44,15 @@ body {
   width: 300px;
 }
 
+.form-control select {
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 5px;
+  width: 300px;
+}
+
 .form-control textarea {
   outline: none;
   border: 1px solid var(--primary);

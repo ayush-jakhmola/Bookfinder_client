@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { redirect } from "next/navigation";
 import "./page.css";
 import { DeleteBook, GetBookById } from "@/api/graphql/book.api";
+import { ListContainer } from "@/components/list/list";
 
 export default function Page() {
   const { id } = useParams();
@@ -50,6 +51,28 @@ export default function Page() {
         <a href={`/books/${id}/update`} className="btn">
           Update
         </a>
+        <a href={`/review/create?bookId=${id}`} className="btn">
+          Review
+        </a>
+      </div>
+      <div>
+        <h1 style={{ fontSize: "25px", fontWeight: "bolder" }}>
+          Reviews & Ratings
+        </h1>
+        <ListContainer>
+          {book?.reviews &&
+            book.reviews.map((_review: any, idx: number) => (
+              <div key={idx} className="review">
+                <div className="review__head">{_review.name}</div>
+                <div className="review__body">{_review.review}</div>
+                <div className="review__footer">
+                  <div className="rating">
+                    {Array(_review.rating).fill("*")}
+                  </div>
+                </div>
+              </div>
+            ))}
+        </ListContainer>
       </div>
     </div>
   );

@@ -36,3 +36,25 @@
 .red {
   background-color: #fa4032;
 }
+
+/* review */
+
+.review__head {
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.review__body {
+  margin: 5px 0;
+}
+
+.review__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rating {
+  font-size: 50px;
+  color: #f4b400; /* Gold color for stars */
+}

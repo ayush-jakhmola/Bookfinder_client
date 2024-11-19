@@ -39,6 +39,11 @@ export const GetBookById = gql`
       author {
         name
       }
+      reviews {
+        name
+        rating
+        review
+      }
     }
   }
 `;
