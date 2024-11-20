@@ -1,0 +1,38 @@
+/* typography */
+
+.image {
+  margin-right: 40px;
+}
+
+.image img {
+  border-radius: 10px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.heading {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.subheading {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* controls */
+
+.controls {
+  margin: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.red {
+  background-color: #fa4032;
+}
